@@ -1,0 +1,36 @@
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2025-11-10T18:16:10.770Z" version="22.1.22" etag="lz-tnkrzrKOd8fYtFePP" type="embed">
+  <diagram name="Página-1" id="BlNcbOkMcMah2MBf-gza">
+    <mxGraphModel dx="1074" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pkgRoot" value="" style="swimlane;rounded=1;horizontal=0;whiteSpace=wrap;html=1;fillColor=#F5F7FA;strokeColor=#2B7CE9;fontSize=13;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="180" y="40" width="500" height="650" as="geometry">
+            <mxRectangle x="180" y="40" width="40" height="170" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pkgModelo" value="modelo" style="shape=package;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" parent="pkgRoot" vertex="1">
+          <mxGeometry x="160" y="530" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkgFiltros" value="filtros" style="shape=package;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" parent="pkgRoot" vertex="1">
+          <mxGeometry x="160" y="380" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkgArquitetura" value="arquitetura" style="shape=package;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" parent="pkgRoot" vertex="1">
+          <mxGeometry x="160" y="230" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pkgAplicacao" value="aplicacao" style="shape=package;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontSize=12;" parent="pkgRoot" vertex="1">
+          <mxGeometry x="160" y="80" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeAppArq" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=open;strokeColor=#000000;" parent="pkgRoot" source="pkgAplicacao" target="pkgArquitetura" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeArqFilt" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=open;strokeColor=#000000;" parent="pkgRoot" source="pkgArquitetura" target="pkgFiltros" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edgeFiltModel" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;endArrow=open;strokeColor=#000000;" parent="pkgRoot" source="pkgFiltros" target="pkgModelo" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
