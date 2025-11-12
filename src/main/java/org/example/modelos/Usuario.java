@@ -1,13 +1,41 @@
 package org.example.modelos;
 
+/**
+ * Classe Usuario — Representa o perfil de um usuário do sistema.
+ *
+ * Este modelo é essencial para o funcionamento do pipeline de ofertas,
+ * pois suas preferências e características pessoais determinam como
+ * as notificações serão filtradas, personalizadas e entregues.
+ *
+ * Os filtros do pipeline consultam atributos do usuário para decidir:
+ *  - Se a oferta é relevante (FiltroPerfil)
+ *  - Se precisa de adaptação para acessibilidade (FiltroAcessibilidade)
+ *  - Por qual canal deve ser enviada (FiltroCanal)
+ */
 public class Usuario {
-    private String nome;
-    private int idade;
-    private Categoria categoriaPreferida;
-    private boolean deficienciaVisual;
-    private String canalPreferido;  // "voz", "email", "push"
 
-    // Getters e Setters
+    /** Nome do usuário */
+    private String nome;
+
+    /** Idade do usuário — pode ser usada futuramente para segmentação */
+    private int idade;
+
+    /** Categoria preferida do usuário  */
+    private Categoria categoriaPreferida;
+
+    /** Indica se o usuário possui deficiência visual — ativa recursos de acessibilidade */
+    private boolean deficienciaVisual;
+
+    /**
+     * Canal preferido para receber notificações:
+     *  - "voz"  → saída em formato de áudio ou leitura automatizada
+     *  - "email" → envio textual via e-mail
+     *  - "push" → notificação instantânea no aplicativo
+     */
+    private String canalPreferido;
+
+    // ================== Getters e Setters ==================
+
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
 
@@ -29,5 +57,3 @@ public class Usuario {
         this.canalPreferido = canalPreferido;
     }
 }
-
-
